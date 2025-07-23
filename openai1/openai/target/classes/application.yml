@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/speechdown
+    username: postgres
+    password: NuevaClaveSegura123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  application:
+    name: my-application
+  ai:
+    openai:
+      api-key: "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"
+      model: "gpt-4" # modelo de OpenAI a utilizar
+      endpoint: "https://api.openai.com/v1/chat/completions" # endpoint de OpenAI para chat completions
+      temperature: 0.7 # nivel de creatividad de las respuestas generadas por el modelo
+      max-tokens: 100 # numero maximo de tokens en la respuesta generada por el modelo
+
+
+
